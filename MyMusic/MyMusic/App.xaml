@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MyMusic.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <!-- FontFamily -->
+            <OnPlatform x:Key="PoppinsBold"
+                    x:TypeArguments="x:String"
+                    iOS="Poppins-Bold"
+                    Android="Poppins-Bold.ttf#Poppins"/>
+
+            <OnPlatform x:Key="PoppinsLight"
+                    x:TypeArguments="x:String"
+                    iOS="Poppins-Light"
+                    Android="Poppins-Light.ttf#Poppins" />
+
+            <!-- style for Lable -->
+            <Style x:Key="PoppinsBoldLabelStyle"
+               TargetType="{x:Type Label}">
+                <Setter Property="FontFamily"
+             Value="{StaticResource PoppinsBold}" />
+            </Style>
+
+            <Style x:Key="PoppinsLightLabelStyle"
+               TargetType="{x:Type Label}">
+                <Setter Property="FontFamily"
+             Value="{StaticResource PoppinsLight}" />
+            </Style>
+
+
+            <Style x:Key="PoppinsBoldButtonStyle"
+               TargetType="{x:Type Button}">
+                <Setter Property="FontFamily"
+             Value="{StaticResource PoppinsBold}" />
+            </Style>
+
+            <Style x:Key="PoppinsLightButtonStyle"
+               TargetType="{x:Type Button}">
+                <Setter Property="FontFamily"
+             Value="{StaticResource PoppinsLight}" />
+            </Style>
+
+
+
+            <Style x:Key="PoppinsBoldlocal:ExtenderEntryStyle"
+               TargetType="{x:Type Entry}">
+                <Setter Property="FontFamily"
+             Value="{StaticResource PoppinsBold}" />
+            </Style>
+
+            <Style x:Key="PoppinsLightEntryStyle"
+               TargetType="{x:Type Entry}">
+                <Setter Property="FontFamily"
+             Value="{StaticResource PoppinsLight}" />
+            </Style>
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

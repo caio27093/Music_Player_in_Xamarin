@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MyMusic.BoasVindas"
+                  NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#34495E">
+
+    <StackLayout >
+        <StackLayout VerticalOptions="Start">
+        </StackLayout>
+
+        <StackLayout VerticalOptions="CenterAndExpand" Margin="20,200,0,0" >
+            <StackLayout Orientation="Horizontal">
+                <Label FontSize="18" Text="Bem-Vindo," Style="{StaticResource PoppinsLightLabelStyle}" TextColor="White"></Label>
+                <Label FontSize="18" Text="Caio!" Style="{StaticResource PoppinsBoldLabelStyle}" TextColor="White"></Label>
+            </StackLayout>
+            <Label FontSize="18" Text="Agora é só relaxar XD" Style="{StaticResource PoppinsLightLabelStyle}" TextColor="White"></Label>
+        </StackLayout>
+        <StackLayout Orientation="Vertical" HorizontalOptions="EndAndExpand" VerticalOptions="EndAndExpand" Margin="40,0,20,20">
+            <Image Source="pessoa.png" WidthRequest="120" Margin="0,0,0,0" Aspect="AspectFit"  VerticalOptions="End"></Image>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

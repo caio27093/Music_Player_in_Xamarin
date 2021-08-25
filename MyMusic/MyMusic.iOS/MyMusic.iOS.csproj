@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6EC1891D-8D7A-4FAB-B9E8-CB786794F59D}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TemplateGuid>{6143fdea-f3c2-4a09-aafa-6e230626515e}</TemplateGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>MyMusic.iOS</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>MyMusic.iOS</AssemblyName>
+    <MtouchEnableSGenConc>true</MtouchEnableSGenConc>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>x86_64</MtouchArch>
+    <MtouchLink>None</MtouchLink>
+    <MtouchDebug>true</MtouchDebug>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>x86_64</MtouchArch>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>ARM64</MtouchArch>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>ARM64</MtouchArch>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <None Include="Entitlements.plist" />
+    <None Include="Info.plist" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <BundleResource Include="Resources\fonts\Poppins-Light.ttf" />
+    <BundleResource Include="Resources\fonts\Poppins-Bold.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon1024.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon180.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon167.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon152.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon120.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon87.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon80.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon76.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon60.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon58.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon40.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon29.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Rg.Plugins.Popup">
+      <Version>1.2.0.223</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.FFImageLoading.Forms">
+      <Version>2.4.11.982</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.FFImageLoading.Svg.Forms">
+      <Version>2.4.11.982</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.FFImageLoading.Transformations">
+      <Version>2.4.11.982</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Forms" Version="4.7.0.968" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.2.0" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\MyMusic\MyMusic.csproj">
+      <Project>{9DA22821-BEAF-4167-9FAA-031F21D65F95}</Project>
+      <Name>MyMusic</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\imgs\icok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\imgs\voltarbranco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\imgs\fonevermelho.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\imgs\fonebranco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\imgs\pular.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\imgs\coracaonormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\imgs\coracaoazul.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\imgs\coracaobazul.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\imgs\coracaoroxo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\imgs\coracaopreenchido.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\imgs\coracaolilas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\imgs\coracaovazioroxo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\imgs\coracaovermelhoclaro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\imgs\icinfo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\imgs\icmusica.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\imgs\icmusicarosa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\imgs\icokpreto.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\imgs\icokbranco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\imgs\icpausebranco1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\imgs\icpauseroxoroxo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\imgs\icpausegravata.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\imgs\icpausebranco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\imgs\icpauseazul.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\imgs\icpausevermelho.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\imgs\icplayroxo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\imgs\icplaygravata.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\imgs\icplayazul.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\imgs\icplaybranco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\imgs\icplayvermelho.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\imgs\icsoundon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\imgs\icsoundoff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\imgs\lfyx5pjajv751.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\imgs\nconfirmed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\imgs\pessoa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\imgs\confirmed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\imgs\icconfirma.png" />
+  </ItemGroup>
+</Project>

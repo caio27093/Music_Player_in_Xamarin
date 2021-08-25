@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:local="clr-namespace:MyMusic.Renders" 
+             NavigationPage.HasNavigationBar="False"
+             x:Class="MyMusic.View.PlayerMusic"
+             xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:ffSvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+             xmlns:ffTransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
+             xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             BackgroundColor="#34495E">
+
+    <MasterDetailPage.Master>
+        <ContentPage Title="Menu"  BackgroundColor="#34495E">
+            <StackLayout>
+
+                <Frame BackgroundColor="#34495E" Margin="50,0" HasShadow="False">
+                    <StackLayout  IsClippedToBounds="True" WidthRequest="300" Orientation="Horizontal"  HorizontalOptions="CenterAndExpand" >
+                        <Label Margin="0,20"  Text="MyMusic" VerticalTextAlignment="Center" FontSize="24" HorizontalTextAlignment="Start" VerticalOptions="Center" TextColor="White" Style="{StaticResource PoppinsLightLabelStyle}"/>
+                        <Image Source="fonebranco" Margin="0,-10,0,0" HeightRequest="40" Aspect="AspectFit" ></Image>
+                    </StackLayout>
+                </Frame>
+                <StackLayout>
+
+                    <StackLayout Orientation="Vertical" Padding="10" >
+
+                        <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Vertical" Padding="0">
+
+                            <Frame Margin="0,0,0,0" Padding="20,0,0,0" IsClippedToBounds="True" CornerRadius="5" BackgroundColor="#2C3E50" WidthRequest="300" HeightRequest="60" >
+
+                                <StackLayout Padding="0,20" IsClippedToBounds="True" WidthRequest="300" Orientation="Horizontal"  HorizontalOptions="CenterAndExpand" >
+                                    <Image Source="home" Margin="0,0,0,0" HeightRequest="70" Aspect="AspectFit" ></Image>
+                                    <Label   Text="Inicio" VerticalTextAlignment="Center" FontSize="12" HorizontalTextAlignment="Start" VerticalOptions="Center" TextColor="White" Style="{StaticResource PoppinsBoldLabelStyle}"/>
+                                </StackLayout>
+
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                                </Frame.GestureRecognizers>
+                            </Frame>
+                            <Frame Margin="0,0,0,0" Padding="20,0,0,0" IsClippedToBounds="True" CornerRadius="5" BackgroundColor="#2C3E50" WidthRequest="300" HeightRequest="60" >
+
+                                <StackLayout Padding="0,20" IsClippedToBounds="True" WidthRequest="300" Orientation="Horizontal"  HorizontalOptions="CenterAndExpand" >
+                                    <Image Source="icmusica" Margin="0,0,0,0" HeightRequest="70" Aspect="AspectFit" ></Image>
+                                    <Label   Text="Musicas" VerticalTextAlignment="Center" FontSize="12" HorizontalTextAlignment="Start" VerticalOptions="Center" TextColor="White" Style="{StaticResource PoppinsBoldLabelStyle}"/>
+                                </StackLayout>
+
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizerMusicas" />
+                                </Frame.GestureRecognizers>
+                            </Frame>
+                            <Frame Margin="0,0,0,0" Padding="20,0,0,0" IsClippedToBounds="True" CornerRadius="5" BackgroundColor="#2C3E50" WidthRequest="300" HeightRequest="60" >
+
+                                <StackLayout Padding="0,20" IsClippedToBounds="True" WidthRequest="300" Orientation="Horizontal"  HorizontalOptions="CenterAndExpand" >
+                                    <Image Source="albums" Margin="0,0,0,0" HeightRequest="70" Aspect="AspectFit" ></Image>
+                                    <Label   Text="Albums" VerticalTextAlignment="Center" FontSize="12" HorizontalTextAlignment="Start" VerticalOptions="Center" TextColor="White" Style="{StaticResource PoppinsBoldLabelStyle}"/>
+                                </StackLayout>
+
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1" />
+                                </Frame.GestureRecognizers>
+                            </Frame>
+                            <Frame Margin="0,0,0,0" Padding="20,0,0,0" IsClippedToBounds="True" CornerRadius="5" BackgroundColor="#2C3E50" WidthRequest="300" HeightRequest="60" >
+
+                                <StackLayout Padding="0,20" IsClippedToBounds="True" WidthRequest="300" Orientation="Horizontal"  HorizontalOptions="CenterAndExpand" >
+                                    <Image Source="playlists" Margin="0,0,0,0" HeightRequest="70" Aspect="AspectFit" ></Image>
+                                    <Label   Text="Playlists" VerticalTextAlignment="Center" FontSize="12" HorizontalTextAlignment="Start" VerticalOptions="Center" TextColor="White" Style="{StaticResource PoppinsBoldLabelStyle}"/>
+                                </StackLayout>
+
+                            </Frame>
+                            <Frame Margin="0,0,0,0" Padding="20,0,0,0" IsClippedToBounds="True" CornerRadius="5" BackgroundColor="#2C3E50" WidthRequest="300" HeightRequest="60" >
+
+                                <StackLayout Padding="0,20" IsClippedToBounds="True" WidthRequest="300" Orientation="Horizontal"  HorizontalOptions="CenterAndExpand" >
+                                    <Image Source="settings1" Margin="0,0,0,0" HeightRequest="70" Aspect="AspectFit" ></Image>
+                                    <Label   Text="Configurações" VerticalTextAlignment="Center" FontSize="12" HorizontalTextAlignment="Start" VerticalOptions="Center" TextColor="White" Style="{StaticResource PoppinsBoldLabelStyle}"/>
+                                </StackLayout>
+
+                            </Frame>
+                            <Frame Margin="0,0,0,0" Padding="20,0,0,0" IsClippedToBounds="True" CornerRadius="5" BackgroundColor="#2C3E50" WidthRequest="300" HeightRequest="60" >
+
+                                <StackLayout Padding="0,20" IsClippedToBounds="True" WidthRequest="300" Orientation="Horizontal"  HorizontalOptions="CenterAndExpand" >
+                                    <Image Source="info" Margin="0,0,0,0" HeightRequest="70" Aspect="AspectFit" ></Image>
+                                    <Label   Text="Sobre" VerticalTextAlignment="Center" FontSize="12" HorizontalTextAlignment="Start" VerticalOptions="Center" TextColor="White" Style="{StaticResource PoppinsBoldLabelStyle}"/>
+                                </StackLayout>
+
+                            </Frame>
+
+                        </StackLayout>
+                    </StackLayout>
+
+                </StackLayout>
+
+
+            </StackLayout>
+        </ContentPage>
+    </MasterDetailPage.Master>
+
+
+    <MasterDetailPage.Detail >
+        <ContentPage BackgroundColor="#2C3E50">
+            <StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+
+                    <Label Style="{StaticResource PoppinsLightLabelStyle}" Text="&lt;"  FontSize="34" TextColor="White" HorizontalTextAlignment="Start" HorizontalOptions="Start" Margin="20,10,0,0">
+
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_2" />
+                        </Label.GestureRecognizers>
+
+                    </Label>
+                    
+                    <Label x:Name="lblAlbum" Style="{StaticResource PoppinsBoldLabelStyle}" Text="Teste de nome de Album" TextColor="White" HorizontalOptions="CenterAndExpand"  Margin="0,23,0,0"></Label>
+                    <Image Source="info" Margin="0,0,20,0" HeightRequest="20" Aspect="AspectFit" ></Image>
+
+                </StackLayout>
+
+                <pancake:PancakeView   VerticalOptions="FillAndExpand" CornerRadius="30,30,0,0" Margin="0,0,0,0" Padding="0" IsClippedToBounds="True"  BackgroundColor="#34495E" >
+                    <StackLayout >
+                        <StackLayout Orientation="Vertical" HorizontalOptions="Center" >
+
+                            <pancake:PancakeView VerticalOptions="Start" HeightRequest="200"  CornerRadius="15,15,15,15" Margin="0,20,0,0" Padding="0" IsClippedToBounds="True"   WidthRequest="200" >
+
+                                <Image  x:Name="imgCover" Source="https://i.pinimg.com/originals/ba/07/34/ba07344987515fc6bffc0a7e4b0f5e8c.webp"
+                                            HeightRequest="250"   
+                                            Aspect="AspectFill"
+                                        BackgroundColor="White"
+                                            VerticalOptions="End" >
+                                </Image>
+                            </pancake:PancakeView>
+
+                        </StackLayout>
+                        <StackLayout Orientation="Vertical">
+                            <Slider x:Name="sliderMus" Margin="20,20,20,0"  IsEnabled="False" ValueChanged="sliderMus_ValueChanged" MaximumTrackColor="White" MinimumTrackColor="White" ThumbColor="White" Value="0" Maximum="10" ></Slider>
+                            <StackLayout Orientation="Horizontal">
+                                <Label x:Name="lbltimer" Style="{StaticResource PoppinsLightLabelStyle}" Text="{Binding MyStringProperty}" FontSize="10" TextColor="White" HorizontalTextAlignment="Start" HorizontalOptions="StartAndExpand" Margin="35,0,0,0"></Label>
+                                <Label x:Name="lblTempoMusica" Style="{StaticResource PoppinsLightLabelStyle}" Text="00:00" FontSize="10" TextColor="White" HorizontalTextAlignment="End" HorizontalOptions="EndAndExpand" Margin="0,0,35,0"></Label>
+                            </StackLayout>
+                        </StackLayout>
+                        <StackLayout Orientation="Vertical">
+                            <Label x:Name="lblmus" Style="{StaticResource PoppinsBoldLabelStyle}" Text="Nome da musica" FontSize="18" TextColor="White" HorizontalOptions="Center" Margin="0,25,0,0"></Label>
+                            <Label x:Name="lblartista" Style="{StaticResource PoppinsLightLabelStyle}" Text="Nome do Artista" FontSize="12" TextColor="White" HorizontalOptions="Center" Margin="0,0,0,0"></Label>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" HeightRequest="50" HorizontalOptions="Center" VerticalOptions="EndAndExpand" Margin="0,30,0,60">
+                            <ImageButton Source="pular" Clicked="ImageButton_Clicked_2" Padding="8" Rotation="180" BackgroundColor="Transparent"></ImageButton>
+                            <ImageButton x:Name="playimg" Source="icplaybranco" Clicked="ImageButton_Clicked" Padding="10" BackgroundColor="#2C3E50" CornerRadius="70"></ImageButton>
+                            <ImageButton Source="pular" Clicked="ImageButton_Clicked_1" Padding="8" BackgroundColor="Transparent" HeightRequest="50" WidthRequest="50"></ImageButton>
+                        </StackLayout>
+
+
+
+
+
+                    </StackLayout>
+                </pancake:PancakeView>
+            </StackLayout>
+
+
+
+        </ContentPage>
+    </MasterDetailPage.Detail>
+</MasterDetailPage>
